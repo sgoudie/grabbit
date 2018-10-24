@@ -8,8 +8,8 @@ df = tables[1]
 
 print(df) # As a DataFrame
 
-print(df.to_json(orient="records", date_format="iso")) # As JSON
+print(df.to_json(orient="records", date_format="iso", lines=True)) # As JSON
 
 df.to_csv("grab.csv", index=False, encoding='utf-8') # Export to CSV
 
-df.to_json("grab.json", orient="records", date_format="iso") # Export to JSON
+df.to_json("grab.json", orient="records", date_format="iso", lines=True) # Export to JSON
