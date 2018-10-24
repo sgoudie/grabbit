@@ -7,6 +7,9 @@ tables = pd.read_html("https://en.wikipedia.org/wiki/List_of_P600_mountains_in_t
 df = tables[1]
 
 print(df) # As a DataFrame
+
 print(df.to_json(orient="records", date_format="iso")) # As JSON
+
 df.to_csv("grab.csv", index=False, encoding='utf-8') # Export to CSV
+
 df.to_json("grab.json", orient="records", date_format="iso") # Export to JSON
